@@ -14,21 +14,6 @@ use PHPUnit\Framework\TestCase;
 /**
  * Mocks Doctrine MongoDB ODM QueryBuilder fluent interface invocations for use in PHPUnit tests.
  * \Doctrine\ODM\MongoDB\Query\Query
- * @method requireIndexes
- * @method field
- * @method prime
- * @method hydrate
- * @method refresh
- * @method find
- * @method findAndUpdate
- * @method returnNew
- * @method findAndRemove
- * @method update
- * @method insert
- * @method remove
- * @method references
- * @method includesReferenceTo
- * @method getQuery
  * @method addAnd
  * @method addManyToSet
  * @method addNor
@@ -43,7 +28,11 @@ use PHPUnit\Framework\TestCase;
  * @method equals
  * @method exclude
  * @method exists
+ * @method field
  * @method finalize
+ * @method find
+ * @method findAndRemove
+ * @method findAndUpdate
  * @method geoIntersects
  * @method geoNear
  * @method geoWithin
@@ -52,15 +41,17 @@ use PHPUnit\Framework\TestCase;
  * @method geoWithinCenterSpher
  * @method geoWithinPolygon
  * @method getNewObj
- * @method setNewObj
- * @method setQueryArray
+ * @method getQuery
  * @method group
  * @method gt
  * @method gte
  * @method hint
+ * @method hydrate
  * @method immortal
  * @method in
  * @method inc
+ * @method includesReferenceTo
+ * @method insert
  * @method limit
  * @method lt
  * @method lte
@@ -78,17 +69,26 @@ use PHPUnit\Framework\TestCase;
  * @method out
  * @method popFirst
  * @method popLast
+ * @method prime
  * @method pull
  * @method pullAll
  * @method push
  * @method pushAll
  * @method range
  * @method reduce
+ * @method references
+ * @method refresh
+ * @method remove
  * @method rename
+ * @method requireIndexes
+ * @method returnNew
  * @method select
  * @method selectElemMatch
  * @method selectSlice
  * @method set
+ * @method setNewObj
+ * @method setOnInsert
+ * @method setQueryArray
  * @method setReadPreference
  * @method size
  * @method skip
@@ -98,6 +98,7 @@ use PHPUnit\Framework\TestCase;
  * @method spherical
  * @method type
  * @method unsetField
+ * @method update
  * @method upsert
  * @method where
  * @method withinBox
@@ -113,21 +114,6 @@ class QueryBuilderMocker extends BaseQueryBuilderMocker
      * @var array
      */
     public static $supportedMethods = array(
-        'requireIndexes',
-        'field',
-        'prime',
-        'hydrate',
-        'refresh',
-        'find',
-        'findAndUpdate',
-        'returnNew',
-        'findAndRemove',
-        'update',
-        'insert',
-        'remove',
-        'references',
-        'includesReferenceTo',
-        'getQuery',
         'addAnd',
         'addManyToSet',
         'addNor',
@@ -141,8 +127,13 @@ class QueryBuilderMocker extends BaseQueryBuilderMocker
         'elemMatch',
         'equals',
         'exclude',
+        'execute',
         'exists',
+        'field',
         'finalize',
+        'find',
+        'findAndRemove',
+        'findAndUpdate',
         'geoIntersects',
         'geoNear',
         'geoWithin',
@@ -151,15 +142,19 @@ class QueryBuilderMocker extends BaseQueryBuilderMocker
         'geoWithinCenterSphere',
         'geoWithinPolygon',
         'getNewObj',
-        'setNewObj',
-        'setQueryArray',
+        'getOneOrNullResult'
+        'getQuery',
+        'getSingleResult',
         'group',
         'gt',
         'gte',
         'hint',
+        'hydrate',
         'immortal',
         'in',
         'inc',
+        'includesReferenceTo',
+        'insert',
         'limit',
         'lt',
         'lte',
@@ -177,17 +172,26 @@ class QueryBuilderMocker extends BaseQueryBuilderMocker
         'out',
         'popFirst',
         'popLast',
+        'prime',
         'pull',
         'pullAll',
         'push',
         'pushAll',
         'range',
         'reduce',
+        'references',
+        'refresh',
+        'remove',
         'rename',
+        'requireIndexes',
+        'returnNew',
         'select',
         'selectElemMatch',
         'selectSlice',
         'set',
+        'setOnInsert',
+        'setNewObj',
+        'setQueryArray',
         'setReadPreference',
         'size',
         'skip',
@@ -197,15 +201,13 @@ class QueryBuilderMocker extends BaseQueryBuilderMocker
         'spherical',
         'type',
         'unsetField',
+        'update',
         'upsert',
         'where',
         'withinBox',
         'withinCenter',
         'withinCenterSphere',
         'withinPolygon',
-        'execute',
-        'getSingleResult',
-        'getOneOrNullResult'
     );
 
     /**
