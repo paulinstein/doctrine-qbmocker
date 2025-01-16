@@ -3,6 +3,7 @@
     "description": "A helper library for mocking Doctrine query builders",
     "homepage": "http://github.com/paulinstein/doctrine-qbmocker",
     "license": "MIT",
+    "version": "0.12.1",
     "authors": [
         {
             "name": "Michael Moussa",
