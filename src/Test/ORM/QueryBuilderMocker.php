@@ -10,7 +10,7 @@ namespace MMoussa\Doctrine\Test\ORM;
 
 use Doctrine\ORM\Query\Expr;
 use MMoussa\Doctrine\Test\QueryBuilderMocker as BaseQueryBuilderMocker;
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Mocks Doctrine ORM QueryBuilder fluent interface invocations for use in PHPUnit tests.
@@ -90,9 +90,9 @@ class QueryBuilderMocker extends BaseQueryBuilderMocker
     /**
      * Initializes the TestCase and creates a mock QueryBuilder and Query for later use.
      *
-     * @param TestCase $testCase
+     * @param PHPUnit_Framework_TestCase $testCase
      */
-    public function __construct(TestCase $testCase)
+    public function __construct(PHPUnit_Framework_TestCase $testCase)
     {
         $this->testCase = $testCase;
         $this->queryBuilder = $testCase->getMockBuilder('Doctrine\ORM\QueryBuilder')

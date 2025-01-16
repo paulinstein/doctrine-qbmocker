@@ -123,14 +123,8 @@ The only supported method of installation is Composer: `composer require --dev "
 * Using this library for mocking the ORM query builder requires you to `composer require --dev "doctrine/orm"` as well.
 * Using this library for mocking the ODM query builder requires you to `composer require --dev "doctrine/mongodb-odm" "jmikola/geojson"` as well.
 
-### PHPUnit support
-* Added support for PHPUnit 6 in version 1.0
-* Older PHPUnit versions are supported in versions 0.x
-
 ### Contributing
 
-I am no longer actively maintaining this project, but I do review and merge Pull Requests, so contributions are welcome.
-There are several unsupported methods still that would be non-trivial to implement. Please feel free to take care of
-those and send a PR.
+Contributions are welcome. There are several unsupported methods still that would be non-trivial to implement. Please feel free to take care of those and send a PR.
 
 All contributions must conform to PSR2 and include 100% test coverage.
